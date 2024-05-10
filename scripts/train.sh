@@ -1,0 +1,35 @@
+torchrun --nproc_per_node 2 train.py \
+    --model_name_or_path "mistralai/Mistral-7B-v0.1" \
+    --run_name "mistral_lora_alpaca_13" \
+    --dataset "alpaca" \
+    --training_method "qlora" \
+    --lora_r 16 \
+    --lora_alpha 32 \
+    --source_max_len 512 \
+    --target_max_len 256 \
+    --report_to "wandb" \
+    --num_train_epochs 2.0 \
+    --warmup_ratio 0.04 \
+    --per_device_train_batch_size 4 \
+    --per_device_eval_batch_size 4 \
+    --gradient_accumulation_steps 8 \
+    --weight_decay 0.0001 \
+    --learning_rate 0.00002 \
+    --max_grad_norm 0.3 \
+    --lr_scheduler_type "constant_with_warmup" \
+    --optim "paged_adamw_8bit" \
+    --save_strategy "steps" \
+    --save_steps 250 \
+    --save_total_limit 10 \
+    --logging_steps 10 \
+    --eval_steps 250 \
+    --evaluation_strategy "steps" \
+    --max_memory "24000MB" \
+    --output_dir "./results" \
+    --do_train \
+    --do_eval \
+    --do_predict \
+    --do_sample \
+    --max_new_tokens 256 \
+    --temperature 0.7 \
+    --seed 42 

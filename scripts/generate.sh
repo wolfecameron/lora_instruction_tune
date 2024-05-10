@@ -1,0 +1,11 @@
+CUDA_VISIBLE_DEVICES=0 python generate.py \
+    --model_name_or_path "mistralai/Mistral-7B-v0.1" \
+    --checkpoint_path "./results/mistral_lora_alpaca_13/final/" \
+    --training_method "qlora" \
+    --max_memory "24000MB" \
+    --max_eval_samples 10 \
+    --dataset alpaca \
+    --source_max_len 256 \
+    --do_sample \
+    --max_new_tokens 256 \
+    --temperature 0.7 
