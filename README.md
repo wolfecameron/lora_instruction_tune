@@ -1,7 +1,5 @@
 # LoRA Instruction Tuning
 
-[![Downloads][downloads-badge]][releases]
-
 This repo contains some simple Python code (based upon HuggingFace) for instruction tuning common LLMs with LoRA/QLoRA.
 The repo contains training code, as well as several different scripts for evaluating model generations.
 
