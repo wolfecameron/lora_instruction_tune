@@ -24,16 +24,16 @@ The repo support instruction tuning with [LoRA](https://arxiv.org/abs/2106.09685
 Currently, the example scripts instruction tune the [Mistral-7B](https://mistral.ai/news/announcing-mistral-7b/) model, though other models can be specified via the `--model_name_or_path` argument.
 
 A breakdown of the main files within the resposity is as follows...
-   > | File                 | Description                           |
-   > | ---------------| ------------------------------------- |
-   > | [train.py](train.py)       | Main training code      |
-   > | [generate.py](generate.py) | Script for examining model output                 |
-   > | [setup.py](setup.py)   | Functions for downloading and configuring models/tokenizers |
-   > | [data.py](data.py)         | Code for configuring datasets |
-   > | ./scripts | Scripts for training/evaluation |
-   > | <td colspan=2><details><summary>See all scripts...</summary><ul><li colspan="2">**[train.sh](./scripts/train.sh)**: run instruction tuning (2x3090 GPUs)</li><li>**[generate.sh](./scripts/generate.sh)**: examine model outputs</li></ul></details>
-   > | ./data | Supplemental data files |
-   > | <td colspan=2><details><summary>See all files...</summary><ul><li colspan="2">**[vicuna_questions.json](./data/vicuna_questions.json)**: evaluation questions from [Vicuna](https://lmsys.org/blog/2023-03-30-vicuna/)</ul></details>
+   > | File                       | Description                                                 |
+   > | ---------------------------| ------------------------------------------------------------|
+   > | [train.py](train.py)       | Main training code                                          |
+   > | [generate.py](generate.py) | Script for examining model output                           |
+   > | [setup.py](setup.py)       | Functions for downloading and configuring models/tokenizers |
+   > | [data.py](data.py)         | Code for configuring datasets                               |
+   > | ./scripts                  | Scripts for training/evaluation                             |
+   > | <td colspan=2><details><summary>See all scripts...</summary><ul><li colspan="2">**[train.sh](./scripts/train.sh)**: run instruction tuning (2x3090 GPUs)</li><li>**[generate.sh](./scripts/generate.sh)**: examine model outputs</li></ul></details> |
+   > | ./data                     | Supplemental data files                                     |
+   > | <td colspan=2><details><summary>See all files...</summary><ul><li colspan="2">**[vicuna_questions.json](./data/vicuna_questions.json)**: evaluation questions from [Vicuna](https://lmsys.org/blog/2023-03-30-vicuna/)</ul></details> |
 
 The training process supports either the Alpaca or Assistant Chatbot dataset.
 Evaluation is performed using the set of questions proposed for evaluating Vicuna (see [here](https://github.com/lm-sys/vicuna-blog-eval)).
