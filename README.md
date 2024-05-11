@@ -57,3 +57,4 @@ Future efforts will likely include:
 * Expansion to more datasets (for training and evaluation)
 * Implementing an [LLM-as-a-judge](https://arxiv.org/abs/2306.05685) style evaluation pipeline
 * Adding evaluation on [MMLU](https://paperswithcode.com/sota/multi-task-language-understanding-on-mmlu)
+* Try out [LoRA+](https://arxiv.org/abs/2402.12354) with different learning rates for A + B matrices 
